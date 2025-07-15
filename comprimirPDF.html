@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Comprimir PDF</title>
+  <title>Redirigiendo a PDF24</title>
   <link rel="stylesheet" href="comprimirPDF.css" />
-  <link rel="icon" type="image/png" href="icons8-document-94.png">
 </head>
 <body>
-  <header>
-    <h1>Comprimir PDF</h1>
+  <div class="container">
+    <h1>Serás redirigido para comprimir tu PDF</h1>
+    <p>Estás siendo enviado al sitio <strong>pdf24.org</strong> para comprimir tus archivos.</p>
+    <button id="goNow">Ir ahora</button>
     <button id="backBtn">← Regresar</button>
-  </header>
-
-  <main>
-    <iframe 
-      src="https://www.ilovepdf.com/es/comprimir_pdf" 
-      frameborder="0"
-      allowfullscreen
-      class="pdf-iframe"
-    ></iframe>
-  </main>
+  </div>
 
   <script>
+    document.getElementById("goNow").addEventListener("click", function () {
+      window.location.href = "https://tools.pdf24.org/es/comprimir-pdf";
+    });
+
     document.getElementById("backBtn").addEventListener("click", function () {
       window.location.href = "dashboard.html";
     });
